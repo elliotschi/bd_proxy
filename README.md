@@ -1,0 +1,5 @@
+This repository holds the code for a Node.js proxy web server for the BetterDoctor api.
+
+The endpoint we are proxying is the doctors' endpoint on https://api.betterdoctor.com. However, we are only using the name to filter. The results from each query are stored in elasticsearch locally using the doctor's slug in the API. Everytime we hit the actual better doctor endpoint we check all the records and see if they exist in elasticsearch. We store them only if we don't have the document already.
+
+To run this web server, you need to have elasticsearch installed locally and running. To do this you can run `elasticsearch` or `elasticsearch -d` to run in daemon mode as a background process. Once you are running elasticsearch you can run `npm run start` or `npm run dev` depending on what your needs are. Tests are written in the jest framework and can be run by `npm run test`. Lastly, you need to configure your environment variables in order to run this server properly. Run the following commands from the root directory `touch .env` and `echo 'API_USER_KEY=[api key here]' > .env`. You can go to https://developer.betterdoctor.com/ to get a user key.

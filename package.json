@@ -1,0 +1,31 @@
+{
+  "name": "bd_proxy",
+  "version": "1.0.0",
+  "description": "proxying the bd api for doctor names",
+  "main": "server.js",
+  "scripts": {
+    "test": "jest",
+    "dev": "nodemon server.js",
+    "start": "pm2 start server.js"
+  },
+  "author": "elliot chi",
+  "license": "UNLICENSED",
+  "dependencies": {
+    "compression": "^1.7.0",
+    "dotenv": "^4.0.0",
+    "elasticsearch": "^13.3.1",
+    "express": "^4.15.4",
+    "morgan": "^1.8.2",
+    "pm2": "^2.6.1",
+    "request": "^2.81.0",
+    "sinon": "^3.2.0"
+  },
+  "devDependencies": {
+    "chai": "^4.1.1",
+    "chai-http": "^3.0.0",
+    "jest": "^20.0.4",
+    "mocha": "^3.5.0",
+    "nodemon": "^1.11.0",
+    "supertest": "^3.0.0"
+  }
+}
